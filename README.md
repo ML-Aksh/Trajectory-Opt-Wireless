@@ -13,7 +13,7 @@ This project develops and present a novel means of optimizing a Multi-UAV system
 # Using this repository
 _When optimizing, I perform block gradient descent, wherein each variable block is optimized while holding the others constant. Unless specified otherwise, Part 1/A refers to optimizing over user schedules, Part 2/B refers to optimizing over UAV Trajectories, and Part 3/C refers to optimizing Power Transmit Control. In case of questions or queries, feel free to contact the author._
 
-**Helper Functions** 
+**Helper Functions**
 These are available in the folder entitled Utils. This contains functions for creating the simulation of UAVs and Users, enforces the specificied constraints, revelant equations for wireless communications, relevant equations for UAV movement, and more. 
 
 **Notebooks** 
