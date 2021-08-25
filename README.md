@@ -1,5 +1,24 @@
 # Trajectory and Communication Design for UAV Facilitated Wireless Networks
 
+# Summary
+
+This project develops and present a novel means of optimizing a Multi-UAV system where UAV-mounted mobile base stations are used to serve users on the ground.
+
+<ul> 
+<li> Mathematically encoded & designed a 10,000+ parameter non-linear and non-convex model of UAVs providing wireless services to ground users in MATLAB. Optimized the system via a synergy of convex and non-convex optimization approaches.
+<li> Designed a K-means algorithm to cluster users, Gaussian Mixture Modeling to approximate traffic flow, genetic algorithm to initialize shortest flight paths, & sequential convex-optimization techniques to maximize data transfer. 
+<li> Increased throughput (communication rates) by 33.57%, 87.4%, 53.2%, 600% for 1,2,3, & 17 UAV cases, respectively. 
+</ul>
+
+# Using this repository
+_When optimizing, I perform block gradient descent, wherein each variable block is optimized while holding the others constant. Unless specified otherwise, Part 1/A refers to optimizing over user schedules, Part 2/B refers to optimizing over UAV Trajectories, and Part 3/C refers to optimizing Power Transmit Control. In case of questions or queries, feel free to contact the author._
+
+**Helper Functions**
+These are available in the folder entitled Utils. This contains functions for creating the simulation of UAVs and Users, enforces the specificied constraints, revelant equations for wireless communications, relevant equations for UAV movement, and more. 
+
+**Notebooks** 
+These are present in the folder entitled Notebooks. These contain the formulation for the optimization problems, the solvers used for solving them, constraint inputs, among other factors. These are used for actually performing the optimization.
+
 # Preprint
 Check out my paper entitled "Machine Learning Coupled Trajectory and Communication Design for UAV-Facilitated Wireless Networks" on https://arxiv.org/abs/2101.10454
 
