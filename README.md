@@ -12,14 +12,38 @@ Extensive simulation and optimization results demonstrate a 33.57%, 87.4%, and 5
 
 Further research into joint adoption of convex and non-convex schemes as well as consideration of environment-dependent channel models would allow for a faster and more optimal deployment of UAVs.
 
-# Results
-![image](https://user-images.githubusercontent.com/41270824/130836151-0f3c7fff-b407-4bc5-9b36-900d9411ebac.png)
+# Key Results
 
+**1 UAV Case**
 
+For the simplest case, 1 drone serving a set of users on the ground, the solution procedure is simpler and doesn't require power optimization. We note significant increases obtained through my presented algorithm when compared to traditional trajectory design schemes. 
+<ul>
+  <li> First we see that in the case of static deployment, and solutions found through circle-packing theory throughputs of 1.054 and 1.105 bps/Hz are attained respectively. 
+  <li> In contrast, my algorithm is able to attain 1.380 bps/Hz and 1.476 bps/Hz depending on whether k-means clustering and the genetic algorithm. 
+  <li> This corresponds to 40.25 and 33.57 % increases from the static and other benchmark schemes respectively.
+</ul>
 
+![Figure 7](https://user-images.githubusercontent.com/41270824/130841848-a290fd79-cdca-40a1-8205-91edb9478713.PNG)
+-----------------------------------------------------------------------------------------------------------------
+**2 UAV Case**
+In the case of 2 UAVs serving users on the ground, one must effectively account for interference between drones and therefore the trajectory, user scheduling and power must be jointly optimized. 
+<ul>
+  <li> We note that we obtain 1.384 bps/hz and 1.084 bps/hz obtained through traditional static and circle packing schemes respectively. This however, raises the concern of static deployment outperforming the case of moving UAVs. This however, is explained through the problem formulation where the average signal rate is maximized rather than the minimum rate. Therefore, in the case of static deployment, where the UAV isn’t forced to initially move around, it may singularly serve one user at the expense of others. 
+  <li> With our proposed algorithm, we obtain throughputs of 2.031 bps/Hz without power transmit control & 2.053 with Power transmit control. 
+  <li> 44.7% and 87.4% increase in throughput from static and circular case
+</ul> 
+    
+![Figure 9](https://user-images.githubusercontent.com/41270824/130841509-ece87beb-f423-4d5c-af0c-435766595bd2.PNG)
+-----------------------------------------------------------------------------------------------------------------
 
-
-# Figures
-
-
-
+**3 UAV Case**
+Finally, a 3 UAV analysis shows the greatest values for system throughput. We note that the shorter flight paths allows for better transmission channels and a smaller dependence upon period. 
+<ul>
+  <li> We again note the effect of problem formulation upon the static case and optimize over a min-rate as well to present a fairer metric. Particularly, the benchmark schemes of static and circular planning attain throughputs of 2.247 and 1.712, respectively.
+  <li> The difference between the min (1.105 bps/Hz) and mean rate (2.247) is further exacerbated.
+  <li> Proposed algorithm outperforms both existing schemes with a 137% and 53.2% increase from the static and circular cases, respectively.
+    
+![Figure 10](https://user-images.githubusercontent.com/41270824/130841531-a838e661-e1ad-487b-9128-955c951e7c24.PNG)
+  
+    
+</ul>
